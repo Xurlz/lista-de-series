@@ -8,11 +8,7 @@ class SeriesController extends Controller
 {
     public function index (Request $request)
     {
-        $series = [
-            "Greys Anatomy",
-            "Lost",
-            "Agents of Shield"
-        ];
+        $series = Serie::all();
 
         return view('series.index', compact('series') );
     }
@@ -26,9 +22,8 @@ class SeriesController extends Controller
     {
         $nome = $request->nome;
 
-        $serie = new Serie();
-        $serie->nome = $nome;
-        
-        var_dump($serie->save());
+        $serie = Serie::create($request->all());
+
+        echo "Série com id {$serie->id} criada: {$serie->nome}.";
     }
 }
