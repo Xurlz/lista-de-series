@@ -26,3 +26,7 @@ Route::get('login', function()
 {
     return view('login.index');
 });
+
+Route::get('series', function() {
+    return view('series.index');
+});
