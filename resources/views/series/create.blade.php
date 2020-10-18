@@ -13,4 +13,4 @@
     
     <button class="btn btn-primary">Adicionar</button>
 </form>
-@endsection('conteudo');
+@endsection('conteudo')
