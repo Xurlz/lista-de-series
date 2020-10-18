@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 
 class SeriesController extends Controller
 {
-    public function listarSeries (Request $request)
+    public function index (Request $request)
     {
         $series = [
             "Greys Anatomy",
@@ -13,16 +13,6 @@ class SeriesController extends Controller
             "Agents of Shield"
         ];
 
-        $html = '<ul>';
-
-        foreach($series as $serie)
-        {
-            $html .= '<li>'.
-            $serie;
-        }
-
-        $html .= '</ul>';
-
-        return $html;
+        return view('series.index', compact('series') );
     }
 }
