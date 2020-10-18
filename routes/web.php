@@ -21,3 +21,8 @@ Route::get('users', function()
 {
     return 'Users!';
 });
+
+Route::get('login', function()
+{
+    return view('login.index');
+});
