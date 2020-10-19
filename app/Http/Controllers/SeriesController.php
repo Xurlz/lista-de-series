@@ -9,8 +9,8 @@ class SeriesController extends Controller
     public function index (Request $request)
     {
         $series = Serie::query()->orderBy('nome')->get();
-
-        return view('series.index', compact('series') );
+        $mensagem = $request->session()->get('mensagem');
+        return view('series.index', compact('series','mensagem') );
     }
 
     public function create()
@@ -23,6 +23,12 @@ class SeriesController extends Controller
         $nome = $request->nome;
 
         $serie = Serie::create($request->all());
+
+        $request->session()
+            ->flash(
+                'mensagem',
+                "Série {$serie->id}: {$serie->nome} criada com sucesso."
+            );
 
         return redirect('/series');
     }
