@@ -8,6 +8,10 @@
       <sourceFolder url="file://$MODULE_DIR$/controle-series/tests" isTestSource="true" packagePrefix="Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/controle-series/tests/Feature" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/controle-series/tests/Unit" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/controle-series/app" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/controle-series/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
+      <sourceFolder url="file://$MODULE_DIR$/controle-series/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
+      <sourceFolder url="file://$MODULE_DIR$/controle-series/tests" isTestSource="true" packagePrefix="Tests\" />
       <excludeFolder url="file://$MODULE_DIR$/controle-series/vendor/brick/math" />
       <excludeFolder url="file://$MODULE_DIR$/controle-series/vendor/carbonphp/carbon-doctrine-types" />
       <excludeFolder url="file://$MODULE_DIR$/controle-series/vendor/composer" />
