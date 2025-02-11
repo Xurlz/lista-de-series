@@ -14,16 +14,13 @@ class SeriesController extends Controller {
             'Kobra Kai'
         ];
 
-        $html = '<ul>';
+        return view('series.index',compact('series'));
 
-        foreach ($series as $serie)
-        {
-            $html .= "<li>$serie</li>";
-        }
+    }
 
-        $html .= '</ul>';
-
-        return $html;
+    function create()
+    {
+        return view('series.create');
     }
 
 }
